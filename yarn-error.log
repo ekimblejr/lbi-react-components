@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/ekimblejr/.nvm/versions/node/v16.13.0/bin/node /Users/ekimblejr/.nvm/versions/node/v16.13.0/bin/yarn publish
+  /Users/ekimblejr/.nvm/versions/node/v16.13.0/bin/node /Users/ekimblejr/.nvm/versions/node/v16.13.0/bin/yarn add --dev prettier eslint
 
 PATH: 
   /Users/ekimblejr/.pyenv/shims:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/mysql-shell/bin:/Users/ekimblejr/.jenv/shims:/Users/ekimblejr/Repositories/github/ekimblejr/lbi-react-components/flutter/bin:/Users/ekimblejr/.rbenv/shims:/Users/ekimblejr/.jenv/shims:/Users/ekimblejr/.jenv/bin:/usr/local/sbin:/Users/ekimblejr/.nvm/versions/node/v16.13.0/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/mysql-shell/bin:/Users/ekimblejr/.jenv/shims://flutter/bin:/Users/ekimblejr/.rbenv/shims:/Users/ekimblejr/.jenv/bin:/usr/local/sbin:/Users/ekimblejr/.nvm/versions/node/v16.13.0/bin
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/-/user/org.couchdb.user:ekimblejr: failed to authenticate: Could not authenticate ekimblejr: bad password
+  Error: https://npm.pkg.github.com/ekimblejr/prettier: Permission denied
       at Request.params.callback [as _callback] (/Users/ekimblejr/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:67029:18)
       at Request.self.callback (/Users/ekimblejr/.nvm/versions/node/v16.13.0/lib/node_modules/yarn/lib/cli.js:140883:22)
       at Request.emit (node:events:390:28)
@@ -28,14 +28,23 @@ Trace:
 
 npm manifest: 
   {
-    "name": "lbi-react-components",
+    "name": "@ekimblejr/lbi-react-components",
     "version": "0.0.1",
     "description": "A simple React component library",
     "main": "lib/index.js",
     "module": "lib/index.esm.js",
     "types": "lib/index.d.ts",
-    "repository": "https://github.com/ekimblejr/lbi-react-components",
-    "author": "Earl Kimble Jr.",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ekimblejr/lbi-react-components"
+    },
+    "publishConfig": {
+      "registry": "https://npm.pkg.github.com/"
+    },
+    "author": {
+      "name": "Earl Kimble Jr.",
+      "email": "ekimblejr@gmail.com"
+    },
     "license": "MIT",
     "private": false,
     "files": [

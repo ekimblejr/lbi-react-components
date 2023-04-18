@@ -1,0 +1,17 @@
+.lbi-hero {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.lbi-hero--full {
+  width: 100vw;
+}
+
+.hero-header-text {
+}
+
+.hero-subheader-text {
+}
