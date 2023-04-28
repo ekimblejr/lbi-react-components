@@ -6,10 +6,13 @@ const meta: Meta<typeof Hero> = {
   title: 'Components/Hero',
   component: Hero,
   argTypes: {
+    width: { control: 'radio' },
+    height: { control: 'number' },
     textColor: { control: 'color' },
     textHeader: { control: 'text' },
     textSubheader: { control: 'text' },
     ctaEnabled: { control: 'boolean' },
+    ctaText: { control: 'text' },
   },
 };
 
@@ -18,10 +21,10 @@ export default meta;
 type Story = StoryObj<typeof Hero>;
 
 // Reuse that template for creating different stories
-export const Primary: Story = {
-  args: { size: 'full' },
+export const StandardHero: Story = {
+  args: { ctaText: 'CTA BUTTON' },
 };
 
-export const Secondary: Story = {
-  args: { ...Primary.args },
+export const ImageHero: Story = {
+  args: { ...StandardHero.args },
 };

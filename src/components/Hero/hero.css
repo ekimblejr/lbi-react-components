@@ -3,7 +3,11 @@
   font-weight: 700;
   border: 1px solid #000;
   border-radius: 8px;
+  display: flex;
   padding: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .lbi-hero--full {
@@ -11,7 +15,13 @@
 }
 
 .hero-header-text {
+  padding: 10px;
 }
 
 .hero-subheader-text {
+  padding: 10px;
+}
+
+.call-to-action {
+  padding: 10px;
 }
