@@ -13,6 +13,7 @@ const meta: Meta<typeof Hero> = {
     textSubheader: { control: 'text' },
     ctaEnabled: { control: 'boolean' },
     ctaText: { control: 'text' },
+    backgroundImage: { control: 'text' },
   },
 };
 

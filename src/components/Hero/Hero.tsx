@@ -13,6 +13,7 @@ export interface HeroProps {
   textSubheader: string;
   ctaEnabled?: boolean;
   ctaText?: string;
+  backgroundImage: string;
 }
 
 const Hero = ({
@@ -24,6 +25,7 @@ const Hero = ({
   textSubheader,
   bgColor,
   ctaText = '',
+  backgroundImage = '',
 }: HeroProps) => {
   return (
     <div
@@ -32,7 +34,9 @@ const Hero = ({
         color: textColor ? textColor : '',
         backgroundColor: bgColor ? bgColor : '',
         height: height ? height : 'auto',
-        backgroundImage: `url(${BackgroundImage})`,
+        backgroundImage: backgroundImage
+          ? `url(${require(`../../assets/images/${backgroundImage}`)})`
+          : '',
       }}
     >
       <div
