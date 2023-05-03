@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Button from '../Button';
 import './hero.css';
+import BackgroundImage from '../../assets/images/bg-370799.png';
 
 export interface HeroProps {
   width?: 'full' | 'size';
@@ -31,6 +32,7 @@ const Hero = ({
         color: textColor ? textColor : '',
         backgroundColor: bgColor ? bgColor : '',
         height: height ? height : 'auto',
+        backgroundImage: `url(${BackgroundImage})`,
       }}
     >
       <div
