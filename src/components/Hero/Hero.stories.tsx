@@ -24,8 +24,10 @@ type Story = StoryObj<typeof Hero>;
 // Reuse that template for creating different stories
 export const StandardHero: Story = {
   args: { ctaText: 'CTA BUTTON' },
+  argTypes: { backgroundImage: { control: { disable: true } } },
 };
 
 export const ImageHero: Story = {
   args: { ...StandardHero.args },
+  argTypes: { bgColor: { control: { disable: true } } },
 };
