@@ -25,7 +25,7 @@ const Tabs = ({ tabList }: TabsProps) => {
           );
         })}
       </ul>
-      {selectedTab}
+      <div className="tab-content">{selectedTab}</div>
     </div>
   );
 };
