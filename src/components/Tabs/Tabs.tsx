@@ -7,27 +7,25 @@ export interface TabsProps {
 }
 
 const Tabs = ({ tabList }: TabsProps) => {
-  const [active, setActive] = useState(tabList[0]);
-  const handleTabChange = (tab: string) => {
-    setActive(tab);
+  const [selectedTab, setSelectedTab] = useState(0);
+  const handleTabChange = (index: number) => {
+    setSelectedTab(index);
   };
   return (
     <div className="tabs">
       <ul className="tab-list">
-        {tabList.map((tab) => {
+        {tabList.map((tab, index) => {
           return (
             <Tab
-              key={tab}
+              key={index}
               label={tab}
-              active={active === tab}
-              onClick={() => handleTabChange(tab)}
+              index={index}
+              setSelectedTab={handleTabChange}
             />
           );
         })}
       </ul>
-      <div className="tab-content">
-        <p>Test Text</p>
-      </div>
+      {selectedTab}
     </div>
   );
 };

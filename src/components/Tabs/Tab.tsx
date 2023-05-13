@@ -2,14 +2,18 @@ import React from 'react';
 import classNames from 'classnames';
 
 export interface TabProps {
-  key: string;
+  key: number;
   label: string;
-  active: boolean;
-  onClick: () => void;
+  index: number;
+  setSelectedTab: (index: number) => void;
 }
 
-const Tab = ({ label, active }: TabProps) => {
-  return <li className={classNames()}>{active ? label : 'NOT ACTIVE'}</li>;
+const Tab = ({ label, setSelectedTab, index }: TabProps) => {
+  return (
+    <li className={classNames()} onClick={() => setSelectedTab(index)}>
+      {label}
+    </li>
+  );
 };
 
 export default Tab;
