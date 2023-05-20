@@ -2,16 +2,17 @@ import React from 'react';
 import classNames from 'classnames';
 
 export interface TabProps {
-  key: number;
-  label: string;
   index: number;
+  key: number;
+  tabName: string;
+  tabContent: string;
   setSelectedTab: (index: number) => void;
 }
 
-const Tab = ({ label, setSelectedTab, index }: TabProps) => {
+const Tab = ({ index, tabName, setSelectedTab }: TabProps) => {
   return (
     <li className={classNames()} onClick={() => setSelectedTab(index)}>
-      {label}
+      {tabName}
     </li>
   );
 };
