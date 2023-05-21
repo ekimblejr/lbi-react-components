@@ -14,11 +14,12 @@ export interface ITabsProps {
 }
 
 const Tabs = ({ tabList }: ITabsList) => {
-  const [selectedTabContent, setSelectedTabContent] = useState('');
+  const [selectedTabContent, setSelectedTabContent] = useState(
+    tabList[0].tabContent,
+  );
   const [selectedTab, setSelectedTab] = useState(0);
   const handleTabChange = (index: number) => {
     setSelectedTab(index);
-    console.log('SelectedTabContent: ' + tabList[index].tabContent);
     setSelectedTabContent(tabList[index].tabContent);
   };
   return (
@@ -30,13 +31,16 @@ const Tabs = ({ tabList }: ITabsList) => {
               index={index}
               key={item.id}
               tabName={item.tabName}
-              tabContent={item.tabContent}
               setSelectedTab={handleTabChange}
+              selected={selectedTab}
             />
           );
         })}
       </ul>
-      <div className="tab-content">{selectedTabContent}</div>
+      <div className="tab-content">
+        {selectedTabContent}
+        {selectedTab}
+      </div>
     </div>
   );
 };
