@@ -14,9 +14,12 @@ export interface ITabsProps {
 }
 
 const Tabs = ({ tabList }: ITabsList) => {
+  const [selectedTabContent, setSelectedTabContent] = useState('');
   const [selectedTab, setSelectedTab] = useState(0);
   const handleTabChange = (index: number) => {
     setSelectedTab(index);
+    console.log('SelectedTabContent: ' + tabList[index].tabContent);
+    setSelectedTabContent(tabList[index].tabContent);
   };
   return (
     <div className="tabs">
@@ -33,7 +36,7 @@ const Tabs = ({ tabList }: ITabsList) => {
           );
         })}
       </ul>
-      <div className="tab-content">{selectedTab}</div>
+      <div className="tab-content">{selectedTabContent}</div>
     </div>
   );
 };
