@@ -32,15 +32,12 @@ const Tabs = ({ tabList }: ITabsList) => {
               key={item.id}
               tabName={item.tabName}
               setSelectedTab={handleTabChange}
-              selected={selectedTab}
+              isSelected={selectedTab}
             />
           );
         })}
       </ul>
-      <div className="tab-content">
-        {selectedTabContent}
-        {selectedTab}
-      </div>
+      <div className="tab-content">{selectedTabContent}</div>
     </div>
   );
 };

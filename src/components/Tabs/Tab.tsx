@@ -6,11 +6,11 @@ export interface TabProps {
   key: number;
   tabName: string;
   setSelectedTab: (index: number) => void;
-  selected: number;
+  isSelected: number;
 }
 
-const Tab = ({ index, tabName, setSelectedTab, selected }: TabProps) => {
-  const tabactive = selected == index ? 'active' : '';
+const Tab = ({ index, tabName, setSelectedTab, isSelected }: TabProps) => {
+  const tabactive = isSelected == index ? 'active' : '';
   return (
     <li
       className={classNames(`${tabactive}`)}
